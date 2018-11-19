@@ -1,0 +1,100 @@
+#pragma once
+#include "storytokenizer.h"
+#include <unordered_map>
+#include <utility>
+using namespace std;
+
+unordered_map<string, bool> sets; 
+unordered_map<string, int> links; //needed forward declaration
+
+class Link : public SectionToken
+{
+	
+public:
+	Link(string str) : text(move(str)){} //did some clang tidy fix thing from const string& to string and from text(str) to this
+	string getPName() const; //do distinction about -gt&; in cpp
+	const string& getText() const;
+	section_t getType() const {return LINK; }
+};
+
+
+class Set : public SectionToken
+{
+private:
+	bool truth;
+	string name;
+public:
+	Set(bool value, string identifier) : truth(value), name(identifier) {}
+	void setThis()
+	{
+		sets[name] = truth;
+	}
+	bool getThis()
+	{
+		return sets[name];
+	}
+
+	section_t getType() const { return SET; }
+};
+
+class If : public SectionToken
+{
+private:
+	bool truth;
+public:
+	If(string name)
+	{
+		truth = sets[name];
+	}
+
+	section_t getType() const { return IF; }
+	
+};
+
+class ElseIf : public SectionToken
+{
+private:
+	bool truth;
+public:
+	ElseIf(Set);
+	section_t getType() const { return ELSEIF; };
+
+};
+
+class Else : public SectionToken
+{
+private:
+	bool truth;
+public:
+	Else() { truth = true; }
+	section_t getType() const { return ELSE; };
+
+};
+
+class GoTo : public SectionToken
+{
+private:
+	string passName;
+public:
+	GoTo(string);
+	section_t getType() const { return GOTO; }
+	int getDestination() const;
+};
+
+class Block : public SectionToken
+{
+private:
+	string text;
+public:
+	
+	section_t getType() const { return BLOCK; }
+};
+
+class Text : public SectionToken
+{
+private:
+	string text;
+public:
+	string getText() { return text; }
+	section_t getType() const { return TEXT; }
+};

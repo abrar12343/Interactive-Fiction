@@ -45,10 +45,11 @@ private:
 	string text;
 	section_t type;
 public:
+	virtual ~SectionToken() = default;
 	SectionToken() : type(TEXT) {}
 	SectionToken(string str, section_t t) : text(str), type(t) {}
 	virtual section_t getType() const { return type; }
-	const string& getText() const { return text; }
+	virtual const string& getText() const { return text; }
 };
 
 class PassageTokenizer

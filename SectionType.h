@@ -1,98 +1,54 @@
-#pragma once
+#ifndef SECTIONTYPE_H
+#define SECTIONTYPE_H
+
 #include "storytokenizer.h"
 #include <unordered_map>
-class GoTo;
+#include <utility>
 using namespace std;
 
-unordered_map<string, bool> sets; 
-unordered_map<unsigned int, GoTo> links; //needed forward declaration
+unordered_map<string, bool> sets;
+unordered_map<string, int> links; //needed forward declaration
 
-class Link
-{
-	string text;
-public:
-	Link(const string& str) : text(str){}
-	string getPName() const; //do distinction about -gt&; in cpp
-	string getText() const { return text; }
-	section_t getType() const {return LINK; }
-};
-
-
-class Set
-{
-private:
-	bool truth;
-	string name;
-public:
-	Set(bool value, string identifier) : truth(value), name(identifier) {}
-	void setThis()
-	{
-		sets[name] = truth;
-	}
-	bool getThis()
-	{
-		return sets[name];
-	}
-
-	section_t getType() const { return SET; }
-};
-
-class If
+class Set : public SectionToken
 {
 private:
 	bool truth;
 public:
-	If(string name)
-	{
-		sets[name] = truth;
-	}
 
-	section_t getType() const { return IF; }
+};
+
+class Link : public SectionToken
+{
 	
 };
 
-class ElseIf
+class GoTo : public SectionToken
 {
-private:
-	bool truth;
-public:
-	ElseIf(Set);
-	section_t getType() const { return ELSEIF; };
 
 };
 
-class Else
+class If : public SectionToken
 {
-private:
-	bool truth = true;
-public:
-	Else();
-	section_t getType() const { return ELSE; };
 
 };
 
-class GoTo
+class ElseIf : public SectionToken
 {
-private:
-	string passName;
-public:
-	GoTo(string);
-	section_t getType() const { return GOTO; }
-	int getDestination() const;
+
 };
 
-class Block
+class Else : public SectionToken
 {
-public:
-	
-	section_t getType() const { return BLOCK; }
+
 };
 
-class Text
+class Block : public SectionToken
 {
-private:
-	string text;
-public:
-	string getText() { return text; }
-	section_t getType() const { return TEXT; }
+
 };
+
+class Text : public SectionToken
+{
+
+};
+#endif
