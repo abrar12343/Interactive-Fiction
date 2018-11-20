@@ -16,27 +16,40 @@ private:
 	bool truth;
 	string name;
 public:
-	Set(string str) : SectionToken(str, SET)
+	Set(const string& str) : SectionToken(str, SET)
 	{
 		
-		name = str.substr(str.find(SET_START, 0), str.find(" to ",0));
-		if(str.substr(str.find(" to ", 0), str.find(')', 0)) == "true")
+		name = str.substr(str.find(SET_START, 0)+7, str.find(" to ",0, 4));
+		//if(str.substr(str.find(" to ", 0) + 4, str.find(')', 0)) == "true")
+		if(str.rfind("false)") == string::npos)
 		{
 			truth = true;
 		}
 		else truth = false;
 	}
+	section_t getType() const { return SET; }
+
 };
 
 class Link : public SectionToken
 {
 private:
-
+	string destination;
+	string display;
 public:
-	Link(string str): SectionToken(str, LINK)
+	Link(const string& str): SectionToken(str, LINK)
 	{
-		
+		if(str.find(LINK_SEPARATOR) != string::npos)
+		{
+			
+		}
+		else
+		{
+			destination = str.substr(str.find(LINK_START)+2, str.find(LINK_END));
+			display = destination;
+		}
 	}
+	section_t getType() const { return LINK; }
 };
 
 class GoTo : public SectionToken
