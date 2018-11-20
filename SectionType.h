@@ -41,7 +41,8 @@ public:
 	{
 		if(str.find(LINK_SEPARATOR) != string::npos)
 		{
-			
+			display = str.substr(str.find(LINK_START) + 2, str.find(LINK_SEPARATOR));
+			destination = str.substr(str.find(LINK_SEPARATOR) + 5, str.find(LINK_END));
 		}
 		else
 		{
@@ -54,31 +55,49 @@ public:
 
 class GoTo : public SectionToken
 {
+private:
+
+public:
 
 };
 
 class If : public SectionToken
 {
+private:
+
+public:
 
 };
 
 class ElseIf : public SectionToken
 {
+private:
+
+public:
 
 };
 
 class Else : public SectionToken
 {
+private:
+
+public:
 
 };
 
 class Block : public SectionToken
 {
+private:
+
+public:
 
 };
 
 class Text : public SectionToken
 {
+private:
+
+public:
 
 };
 #endif
