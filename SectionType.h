@@ -16,19 +16,9 @@ private:
 	bool truth;
 	string name;
 public:
-	Set(const string& str) : SectionToken(str, SET)
-	{
-		
-		name = str.substr(str.find(SET_START, 0)+7, str.find(" to ",0, 4));
-		//if(str.substr(str.find(" to ", 0) + 4, str.find(')', 0)) == "true")
-		if(str.rfind("false)") == string::npos)
-		{
-			truth = true;
-		}
-		else truth = false;
-	}
+	Set(const string&); //moved to cpp
 	section_t getType() const { return SET; }
-
+	void setVariable(const string&);
 };
 
 class Link : public SectionToken
@@ -37,28 +27,17 @@ private:
 	string destination;
 	string display;
 public:
-	Link(const string& str): SectionToken(str, LINK)
-	{
-		if(str.find(LINK_SEPARATOR) != string::npos)
-		{
-			display = str.substr(str.find(LINK_START) + 2, str.find(LINK_SEPARATOR));
-			destination = str.substr(str.find(LINK_SEPARATOR) + 5, str.find(LINK_END));
-		}
-		else
-		{
-			destination = str.substr(str.find(LINK_START)+2, str.find(LINK_END));
-			display = destination;
-		}
-	}
+	Link(const string& str); //moved to cpp
 	section_t getType() const { return LINK; }
 };
 
 class GoTo : public SectionToken
 {
 private:
-
+	string destination;
 public:
-
+	GoTo(const string&);
+	section_t getType() const override { return GOTO; }
 };
 
 class If : public SectionToken
@@ -67,6 +46,7 @@ private:
 
 public:
 
+	section_t getType() const override { return IF; }
 };
 
 class ElseIf : public SectionToken
@@ -75,6 +55,7 @@ private:
 
 public:
 
+	section_t getType() const override { return ELSEIF; }
 };
 
 class Else : public SectionToken
@@ -83,6 +64,7 @@ private:
 
 public:
 
+	section_t getType() const override { return ELSE; }
 };
 
 class Block : public SectionToken
@@ -91,6 +73,7 @@ private:
 
 public:
 
+	section_t getType() const override { return BLOCK; }
 };
 
 class Text : public SectionToken
@@ -99,5 +82,6 @@ private:
 
 public:
 
+	section_t getType() const override { return TEXT; }
 };
 #endif
