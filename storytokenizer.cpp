@@ -1,4 +1,9 @@
+#pragma once
 #include "storytokenizer.h"
+#include <iostream>
+unordered_map<string, bool> sets;
+unordered_map<string, int> links; //needed forward declaration
+unordered_map<string, int> passages;
 
 bool StoryTokenizer::hasNextPassage() const
 {
@@ -23,6 +28,20 @@ PassageToken StoryTokenizer::nextPassage()
 		else
 			return PassageToken(story.substr(namestart, nameend - namestart), story.substr(start, end - start));
 	}
+}
+void printPassages(unordered_map<string, int> const&m)
+{
+	for (auto const& pair : m)
+	{
+		cout << "{" << pair.first << ": " << pair.second << "}\n";
+	}
+}
+
+void PassageToken::linkPassage(int x)
+{
+	 passages[name] = x;
+	 printPassages(passages);
+	 cout << endl;
 }
 
 bool PassageTokenizer::hasNextSection() const

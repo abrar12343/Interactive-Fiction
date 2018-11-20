@@ -5,7 +5,6 @@
 #include <unordered_map>
 using namespace std;
 
-int passnumber = 0;
 
 int main()
 {
@@ -26,13 +25,15 @@ int main()
 	}
 
 	StoryTokenizer st(story);
-	//int passnumber = 0;
+	int passnumber = 0;
 	while (st.hasNextPassage())
 	{
 		PassageToken ptok = st.nextPassage();
 		passnumber++;
+		ptok.linkPassage(passnumber);
 		//cout << "Passage " << pass << ":  " << endl;
 		out << "Passage " << passnumber << ":  " << endl;
+		
 		PassageTokenizer pt(ptok.getText());
 		while (pt.hasNextSection())
 		{

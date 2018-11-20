@@ -1,0 +1,230 @@
+{New Game: 1}
+
+{New Game: 1}
+{Start: 2}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{check out the airing closet: 4}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{check out the airing closet: 4}
+{stay put for now: 5}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb down drain: 6}
+{check out the airing closet: 4}
+{stay put for now: 5}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{check out the airing closet: 4}
+{stay put for now: 5}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+{Go into the kitchen: 13}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+{Go into the kitchen: 13}
+{Go into master bedroom: 14}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+{Go into the kitchen: 13}
+{Go into master bedroom: 14}
+{take the crackers: 15}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+{Go into the kitchen: 13}
+{Go into master bedroom: 14}
+{take the crackers: 15}
+{take the water: 16}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+{Go into the kitchen: 13}
+{Go into master bedroom: 14}
+{take the crackers: 15}
+{take the water: 16}
+{EPILOGUE: 17}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+{Go into the kitchen: 13}
+{Go into master bedroom: 14}
+{take the crackers: 15}
+{take the water: 16}
+{EPILOGUE: 17}
+{peek into bedroom vent: 18}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+{Go into the kitchen: 13}
+{Go into master bedroom: 14}
+{Achievements: 19}
+{take the crackers: 15}
+{take the water: 16}
+{EPILOGUE: 17}
+{peek into bedroom vent: 18}
+
+{New Game: 1}
+{climb out the window: 3}
+{Start: 2}
+{climb up into attic window: 7}
+{climb down drain: 6}
+{go down into hall: 11}
+{check out the airing closet: 4}
+{stay put for now: 5}
+{climb into master bedroom window: 8}
+{climb down onto the porch: 9}
+{stay hidden in vents: 10}
+{Go into the bathroom: 12}
+{Go into the kitchen: 13}
+{Go into master bedroom: 14}
+{Achievements: 19}
+{take the crackers: 15}
+{take the water: 16}
+{EPILOGUE: 17}
+{peek into bedroom vent: 18}
+{nothing at all: 20}
+

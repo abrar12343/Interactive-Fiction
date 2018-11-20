@@ -7,8 +7,6 @@
 #include <string>
 using namespace std;
 
-unordered_map<string, bool> sets;
-unordered_map<string, int> links; //needed forward declaration
 
 class Set : public SectionToken
 {
@@ -70,7 +68,7 @@ public:
 class Block : public SectionToken
 {
 private:
-
+	bool ifTrue; //if a previous if condition was true, block is executed
 public:
 
 	section_t getType() const override { return BLOCK; }

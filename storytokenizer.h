@@ -1,8 +1,10 @@
 #ifndef __STORYTOKENIZER_H
 #define __STORYTOKENIZER_H
 
+#include <unordered_map>
 #include <string>
 using namespace std;
+
 
 enum section_t { LINK, GOTO, SET, IF, ELSEIF, ELSE, BLOCK, TEXT };
 
@@ -37,6 +39,7 @@ public:
 	PassageToken(const string& n, const string& p) : name(n), pass(p) {}
 	const string& getName() const { return name; }
 	const string& getText() const { return pass; }
+	void linkPassage(int x);
 };
 
 class SectionToken
