@@ -28,6 +28,33 @@ const string PASSAGE_NAME_END = "\"";
 const string GOTO_NAME_START = "&quot;";
 const string GOTO_NAME_END = "&quot;";
 
+//interpreter section starters
+const string IPASSAGE = "Passage "; 
+const string ILINK = "  Link:  "; 
+const string ISET = "  Set:  "; 
+const string IGOTO = "  Go-to: "; 
+const string IIF = "  If:  ";
+const string IELSEIF = "  Else-if: ";
+const string IELSE = "  Else:  ";
+const string IBLOCK = "  Block:  ";
+const string ITEXT = "  Text:  ";
+
+/**
+ * \brief 
+ * \param str check if _Equal is appropriate
+ * \return 
+ */
+inline bool isStart(const string& str) 
+{
+	if (str._Equal(IPASSAGE) || str._Equal(ILINK)|| str._Equal(ISET)
+		|| str._Equal(IGOTO) || str._Equal(IIF) || str._Equal(IELSEIF) 
+		|| str._Equal(IELSE) || str._Equal(IBLOCK) || str._Equal(ITEXT))
+	{
+		return true;
+	}
+	else return false;
+}
+
 class PassageToken
 {
 private:
@@ -39,7 +66,7 @@ public:
 	PassageToken(const string& n, const string& p) : name(n), pass(p) {}
 	const string& getName() const { return name; }
 	const string& getText() const { return pass; }
-	void linkPassage(int x);
+	//void linkPassage(int x);
 };
 
 class SectionToken

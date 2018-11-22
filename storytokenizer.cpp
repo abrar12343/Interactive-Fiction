@@ -1,9 +1,8 @@
-#pragma once
 #include "storytokenizer.h"
 #include <iostream>
-unordered_map<string, bool> sets;
-unordered_map<string, int> links; //needed forward declaration
-unordered_map<string, int> passages;
+//unordered_map<string, bool> sets;
+////unordered_map<string, int> links; //needed forward declaration
+//unordered_map<string, int> passages;
 
 bool StoryTokenizer::hasNextPassage() const
 {
@@ -29,6 +28,8 @@ PassageToken StoryTokenizer::nextPassage()
 			return PassageToken(story.substr(namestart, nameend - namestart), story.substr(start, end - start));
 	}
 }
+
+//test function delete
 void printPassages(unordered_map<string, int> const&m)
 {
 	for (auto const& pair : m)
@@ -37,12 +38,12 @@ void printPassages(unordered_map<string, int> const&m)
 	}
 }
 
-void PassageToken::linkPassage(int x)
-{
-	 passages[name] = x;
-	 printPassages(passages);
-	 cout << endl;
-}
+//void PassageToken::linkPassage(int x)
+//{
+//	 passages[name] = x;
+//	 printPassages(passages);
+//	 cout << endl;
+//}
 
 bool PassageTokenizer::hasNextSection() const
 {
