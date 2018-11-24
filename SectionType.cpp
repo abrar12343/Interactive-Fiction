@@ -85,5 +85,12 @@ ElseIf::ElseIf(bool x, string str) : SectionToken(str, ELSEIF)
 
 PassageTokenizer Block::BlockTokenize()
 {
-
+	if (str.find(BLOCK_START) != string::npos)
+	{
+		
+	}
+	else
+	{
+		
+	}
 }
